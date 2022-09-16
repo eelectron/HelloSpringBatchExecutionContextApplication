@@ -17,7 +17,7 @@ public class CustomerDataService {
     private List<Customer> customerList = new ArrayList<>();
 
     public void loadCustomerData(){
-        int n = 10;
+        int n = 16;
         for(int i = 0; i < n; i++){
             Customer customer = new Customer();
             customer.setId((long)i);

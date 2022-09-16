@@ -27,7 +27,7 @@ public class JobController {
     @PostMapping("/runJob")
     public ExitStatus runJob() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
         JobParameters jobParameters  = new JobParametersBuilder()
-                .addString("day", "16-sep-2022 10:22 hrs")
+                .addString("day", "16-sep-2022 17:51 hrs")
                 .toJobParameters();
 
 

@@ -42,15 +42,15 @@ public class CustomerReader extends ItemStreamSupport implements ItemReader<Cust
         }
 
         Customer customer = null;
-        if(index == 7){
-            throw new RuntimeException("This will end your job .");
-        }
+//        if(index == 10){
+//            throw new RuntimeException("This will end your job .");
+//        }
         if(index < customerList.size()){
             customer = customerList.get(index);
             index += 1;
         }
 
-        update(executionContext);
+//        update(executionContext);
         return customer;
     }
 
@@ -63,12 +63,7 @@ public class CustomerReader extends ItemStreamSupport implements ItemReader<Cust
         this.executionContext = executionContext;
         if(executionContext.containsKey(getExecutionContextKey(INDEX_KEY))){
             int savedIndex = executionContext.getInt(getExecutionContextKey(INDEX_KEY));
-            if(savedIndex == 7){
-                this.index = 8;
-            }
-            else{
-                this.index = savedIndex;
-            }
+            this.index = savedIndex;
         }
         else{
             this.index = 0;
